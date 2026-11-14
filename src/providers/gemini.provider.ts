@@ -6,6 +6,11 @@ if (!apiKey) {
   throw new Error("GEMINI_API_KEY is not defined in the environment variables.");
 }
 
-const gemini = new GoogleGenAI({ apiKey });
+const gemini = new GoogleGenAI({
+  apiKey,
+  httpOptions: {
+    timeout: 30_000,
+  },
+});
 
 export default gemini;

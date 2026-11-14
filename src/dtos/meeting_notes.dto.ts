@@ -1,6 +1,7 @@
+export interface MeetingNotesResponseDto {
+  cleanedNotes: string;
+}
 
-
-
-export interface MeetingNotesDTO {
+export interface MeetingNotesRequestDto {
   notes: string;
 }

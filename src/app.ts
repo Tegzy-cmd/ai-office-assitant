@@ -1,11 +1,6 @@
 import express from "express";
-import dotenv from "dotenv";
-import path from "path";
+import assitantRouter from "./routes/assistant.routes";
 
-const environment = process.env.NODE_ENV || "staging";
-dotenv.config({ path: path.resolve(process.cwd(), `.env.${environment}`) });
-// Fallback to standard .env file
-dotenv.config();
 import cors from "cors";
 import helmet from "helmet";
 import morgan from "morgan";
@@ -45,6 +40,7 @@ if (process.env.NODE_ENV === "development") app.use(morgan("dev"));
 
 
 // Routes
+app.use("/api/assist", assitantRouter);
 
 
 // Start Job
