@@ -3,6 +3,6 @@ import { cleanMeetingNotesController } from "../controllers/meeting-notes.contro
 
 const assistantRouter = Router();
 
-assistantRouter.post("/clean-meeting-notes", cleanMeetingNotesController);
+assistantRouter.post("/", cleanMeetingNotesController);
 
 export default assistantRouter;
