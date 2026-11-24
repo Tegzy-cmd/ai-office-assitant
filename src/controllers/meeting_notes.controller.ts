@@ -1,6 +1,6 @@
 import type { Request, Response } from "express";
 import type { MeetingNotesRequestDto } from "../dtos/meeting_notes.dto";
-import { cleanMeetingNotes } from "../services/meeting-notes.service";
+import { cleanMeetingNotes } from "../services/meeting_notes.service";
 
 export async function cleanMeetingNotesController(req: Request, res: Response): Promise<any> {
     const { notes } = req.body;

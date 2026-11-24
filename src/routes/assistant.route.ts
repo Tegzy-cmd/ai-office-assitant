@@ -1,5 +1,5 @@
 import {Router} from "express";
-import { cleanMeetingNotesController } from "../controllers/meeting-notes.controller";
+import { cleanMeetingNotesController } from "../controllers/meeting_notes.controller";
 
 const assistantRouter = Router();
 

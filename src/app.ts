@@ -1,12 +1,13 @@
 import express from "express";
-import assitantRouter from "./routes/assistant.routes";
+import assitantRouter from "./routes/assistant.route";
 
 import cors from "cors";
 import helmet from "helmet";
 import morgan from "morgan";
 import cookieParser from "cookie-parser";
-import assistantRouter from "./routes/assistant.routes";
-import reviewRouter from "./routes/review-summary.routes";
+import assistantRouter from "./routes/assistant.route";
+import reviewRouter from "./routes/review_summary.route";
+import studyRouter from "./routes/study_helper.route";
 // import connectDB from "./config/db";
 
 // connectDB().then(() => {
@@ -43,7 +44,8 @@ if (process.env.NODE_ENV === "development") app.use(morgan("dev"));
 
 // Routes
 app.use("/api/assist/meeting-notes", assistantRouter);
-app.use("/api/assist/review-summary", reviewRouter)
+app.use("/api/assist/review-summary", reviewRouter);
+app.use("/api/assist/study-helper", studyRouter);
 
 
 // Start Job

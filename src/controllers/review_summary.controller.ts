@@ -1,6 +1,6 @@
 import type { Request, Response} from 'express';
-import type { ReviewSummaryRequestDto } from '../dtos/review-summary.dto';
-import { summarizeReviews } from '../services/review-summary.service';
+import type { ReviewSummaryRequestDto } from '../dtos/review_summary.dto';
+import { summarizeReviews } from '../services/review_summary.service';
 
 export async function reviewSummaryController(
   req: Request<{}, {}, ReviewSummaryRequestDto>,
